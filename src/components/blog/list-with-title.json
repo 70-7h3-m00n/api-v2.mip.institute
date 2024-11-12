@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blog_list_with_titles",
+  "info": {
+    "displayName": "listWithTitle",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "text"
+    },
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.item-with-title"
+    }
+  }
+}

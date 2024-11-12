@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_list_with_icons",
+  "info": {
+    "displayName": "listWithIcon",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "blocks"
+    },
+    "text": {
+      "type": "blocks"
+    }
+  }
+}

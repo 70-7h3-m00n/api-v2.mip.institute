@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blog_list_with_backgrounds",
+  "info": {
+    "displayName": "listWithBackground",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "blocks"
+    },
+    "lineColor": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "blocks"
+    }
+  }
+}
