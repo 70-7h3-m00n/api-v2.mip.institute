@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blog_rows",
+  "info": {
+    "displayName": "row",
+    "icon": "collapse"
+  },
+  "options": {},
+  "attributes": {
+    "record": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text"
+    }
+  }
+}

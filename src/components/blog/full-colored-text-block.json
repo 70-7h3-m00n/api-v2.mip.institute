@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blog_full_colored_text_blocks",
+  "info": {
+    "displayName": "fullColoredTextBlock",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "textColor": {
+      "type": "string"
+    },
+    "text": {
+      "type": "blocks"
+    }
+  }
+}

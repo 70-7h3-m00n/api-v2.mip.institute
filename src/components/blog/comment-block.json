@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blog_comment_blocks",
+  "info": {
+    "displayName": "commentBlock",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "lineColor": {
+      "type": "string"
+    },
+    "text": {
+      "type": "blocks"
+    }
+  }
+}

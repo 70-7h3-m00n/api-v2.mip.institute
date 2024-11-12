@@ -451,7 +451,8 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
   attributes: {
     articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
-    avatar: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    avatar: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -473,6 +474,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
 export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   collectionName: 'blogs';
   info: {
+    description: '';
     displayName: 'Blog';
     pluralName: 'blogs';
     singularName: 'blog';
@@ -481,14 +483,33 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    article: Schema.Attribute.DynamicZone<
+      [
+        'blog.big-size-text',
+        'blog.list-with-background',
+        'blog.comment-block',
+        'blog.full-colored-text-block',
+        'blog.subtitle',
+        'shared.list-with-icon',
+        'blog.list-with-title',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    date: Schema.Attribute.Date;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
+    picture: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    previewOnly: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
+    readTime: Schema.Attribute.Integer;
     slug: Schema.Attribute.String;
+    studyField: Schema.Attribute.String;
+    studyFieldSlug: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -556,6 +577,57 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProgramProgram extends Struct.CollectionTypeSchema {
+  collectionName: 'programs';
+  info: {
+    displayName: 'program';
+    pluralName: 'programs';
+    singularName: 'program';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroPicture: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::program.program'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 
@@ -1070,6 +1142,7 @@ declare module '@strapi/strapi' {
       'api::blog.blog': ApiBlogBlog;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
+      'api::program.program': ApiProgramProgram;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

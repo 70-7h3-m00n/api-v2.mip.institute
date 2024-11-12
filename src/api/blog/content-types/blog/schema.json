@@ -4,7 +4,8 @@
   "info": {
     "singularName": "blog",
     "pluralName": "blogs",
-    "displayName": "Blog"
+    "displayName": "Blog",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,50 @@
   "attributes": {
     "slug": {
       "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "studyField": {
+      "type": "string"
+    },
+    "studyFieldSlug": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "previewOnly": {
+      "type": "boolean"
+    },
+    "readTime": {
+      "type": "integer"
+    },
+    "article": {
+      "type": "dynamiczone",
+      "components": [
+        "blog.big-size-text",
+        "blog.list-with-background",
+        "blog.comment-block",
+        "blog.full-colored-text-block",
+        "blog.subtitle",
+        "shared.list-with-icon",
+        "blog.list-with-title"
+      ]
     }
   }
 }

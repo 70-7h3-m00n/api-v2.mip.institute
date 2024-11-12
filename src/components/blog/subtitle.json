@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blog_subtitles",
+  "info": {
+    "displayName": "subtitle",
+    "icon": "arrowRight"
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "blocks"
+    },
+    "color": {
+      "type": "string"
+    },
+    "subtitleSlug": {
+      "type": "string"
+    }
+  }
+}

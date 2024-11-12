@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blog_item_with_titles",
+  "info": {
+    "displayName": "itemWithTitle",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}
