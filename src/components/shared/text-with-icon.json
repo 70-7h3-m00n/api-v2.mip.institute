@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_shared_text_with_icons",
+  "info": {
+    "displayName": "textWithIcon",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "text"
+    }
+  }
+}

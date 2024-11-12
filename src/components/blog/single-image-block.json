@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blog_single_image_blocks",
+  "info": {
+    "displayName": "singleImageBlock",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "picture": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "alternativeText": {
+      "type": "string"
+    }
+  }
+}

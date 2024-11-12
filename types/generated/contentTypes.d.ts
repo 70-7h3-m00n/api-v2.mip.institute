@@ -486,12 +486,15 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     article: Schema.Attribute.DynamicZone<
       [
         'blog.big-size-text',
-        'blog.list-with-background',
         'blog.comment-block',
         'blog.full-colored-text-block',
         'blog.subtitle',
         'shared.list-with-icon',
         'blog.list-with-title',
+        'blog.single-image-block',
+        'blog.text-block-with-bg',
+        'blog.list-with-bg-and-title',
+        'blog.table',
       ]
     >;
     createdAt: Schema.Attribute.DateTime;

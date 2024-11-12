@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_long_texts",
+  "info": {
+    "displayName": "longText",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}
