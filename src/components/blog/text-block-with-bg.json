@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blog_text_block_with_bgs",
+  "info": {
+    "displayName": "textBlockWithBg",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+    "textColor": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "borderColor": {
+      "type": "string"
+    }
+  }
+}

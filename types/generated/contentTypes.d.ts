@@ -486,14 +486,20 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     article: Schema.Attribute.DynamicZone<
       [
         'blog.big-size-text',
-        'blog.list-with-background',
         'blog.comment-block',
         'blog.full-colored-text-block',
         'blog.subtitle',
         'shared.list-with-icon',
         'blog.list-with-title',
+        'blog.single-image-block',
+        'blog.text-block-with-bg',
+        'blog.list-with-bg-and-title',
+        'blog.table',
+        'blog.teacher-comment',
+        'blog.related-programs',
       ]
     >;
+    blogs: Schema.Attribute.Relation<'manyToMany', 'api::blog.blog'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -505,6 +511,8 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     previewOnly: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
     readTime: Schema.Attribute.Integer;
+    relatedBlogs: Schema.Attribute.Relation<'manyToMany', 'api::blog.blog'>;
+    seo: Schema.Attribute.Component<'shared.seo', true>;
     slug: Schema.Attribute.String;
     studyField: Schema.Attribute.String;
     studyFieldSlug: Schema.Attribute.String;

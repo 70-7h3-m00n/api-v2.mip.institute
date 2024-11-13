@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blog_list_with_bg_and_titles",
+  "info": {
+    "displayName": "listWithBgAndTitle",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text-with-icon"
+    },
+    "title": {
+      "type": "text"
+    },
+    "lineColor": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    }
+  }
+}

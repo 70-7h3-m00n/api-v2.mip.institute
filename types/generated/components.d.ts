@@ -63,6 +63,20 @@ export interface BlogListWithBackground extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogListWithBgAndTitle extends Struct.ComponentSchema {
+  collectionName: 'components_blog_list_with_bg_and_titles';
+  info: {
+    displayName: 'listWithBgAndTitle';
+    icon: 'attachment';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.String;
+    item: Schema.Attribute.Component<'shared.text-with-icon', true>;
+    lineColor: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
+}
+
 export interface BlogListWithTitle extends Struct.ComponentSchema {
   collectionName: 'components_blog_list_with_titles';
   info: {
@@ -76,14 +90,38 @@ export interface BlogListWithTitle extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogRelatedPrograms extends Struct.ComponentSchema {
+  collectionName: 'components_blog_related_programs';
+  info: {
+    displayName: 'relatedPrograms';
+    icon: 'bulletList';
+  };
+  attributes: {
+    programs: Schema.Attribute.Relation<'oneToMany', 'api::program.program'>;
+  };
+}
+
 export interface BlogRow extends Struct.ComponentSchema {
   collectionName: 'components_blog_rows';
   info: {
+    description: '';
     displayName: 'row';
     icon: 'collapse';
   };
   attributes: {
     record: Schema.Attribute.Component<'shared.text', true>;
+  };
+}
+
+export interface BlogSingleImageBlock extends Struct.ComponentSchema {
+  collectionName: 'components_blog_single_image_blocks';
+  info: {
+    displayName: 'singleImageBlock';
+    icon: 'crown';
+  };
+  attributes: {
+    alternativeText: Schema.Attribute.String;
+    picture: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -100,6 +138,47 @@ export interface BlogSubtitle extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogTable extends Struct.ComponentSchema {
+  collectionName: 'components_blog_tables';
+  info: {
+    displayName: 'table';
+    icon: 'apps';
+  };
+  attributes: {
+    row: Schema.Attribute.Component<'blog.row', true>;
+  };
+}
+
+export interface BlogTeacherComment extends Struct.ComponentSchema {
+  collectionName: 'components_blog_teacher_comments';
+  info: {
+    description: '';
+    displayName: 'teacherComment';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    borderColor: Schema.Attribute.String;
+    comment: Schema.Attribute.Text;
+    portrait: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    specialization: Schema.Attribute.Text;
+  };
+}
+
+export interface BlogTextBlockWithBg extends Struct.ComponentSchema {
+  collectionName: 'components_blog_text_block_with_bgs';
+  info: {
+    description: '';
+    displayName: 'textBlockWithBg';
+    icon: 'apps';
+  };
+  attributes: {
+    backgroundColor: Schema.Attribute.String;
+    borderColor: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
+    textColor: Schema.Attribute.String;
+  };
+}
+
 export interface SharedListWithIcon extends Struct.ComponentSchema {
   collectionName: 'components_shared_list_with_icons';
   info: {
@@ -109,6 +188,17 @@ export interface SharedListWithIcon extends Struct.ComponentSchema {
   attributes: {
     icon: Schema.Attribute.Blocks;
     text: Schema.Attribute.Blocks;
+  };
+}
+
+export interface SharedLongText extends Struct.ComponentSchema {
+  collectionName: 'components_shared_long_texts';
+  info: {
+    displayName: 'longText';
+    icon: 'bulletList';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -179,11 +269,24 @@ export interface SharedSlider extends Struct.ComponentSchema {
 export interface SharedText extends Struct.ComponentSchema {
   collectionName: 'components_shared_texts';
   info: {
+    description: '';
     displayName: 'text';
     icon: 'bold';
   };
   attributes: {
-    text: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
+  };
+}
+
+export interface SharedTextWithIcon extends Struct.ComponentSchema {
+  collectionName: 'components_shared_text_with_icons';
+  info: {
+    displayName: 'textWithIcon';
+    icon: 'apps';
+  };
+  attributes: {
+    icon: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -195,16 +298,24 @@ declare module '@strapi/strapi' {
       'blog.full-colored-text-block': BlogFullColoredTextBlock;
       'blog.item-with-title': BlogItemWithTitle;
       'blog.list-with-background': BlogListWithBackground;
+      'blog.list-with-bg-and-title': BlogListWithBgAndTitle;
       'blog.list-with-title': BlogListWithTitle;
+      'blog.related-programs': BlogRelatedPrograms;
       'blog.row': BlogRow;
+      'blog.single-image-block': BlogSingleImageBlock;
       'blog.subtitle': BlogSubtitle;
+      'blog.table': BlogTable;
+      'blog.teacher-comment': BlogTeacherComment;
+      'blog.text-block-with-bg': BlogTextBlockWithBg;
       'shared.list-with-icon': SharedListWithIcon;
+      'shared.long-text': SharedLongText;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.text': SharedText;
+      'shared.text-with-icon': SharedTextWithIcon;
     }
   }
 }

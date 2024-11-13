@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blog_teacher_comments",
+  "info": {
+    "displayName": "teacherComment",
+    "icon": "chartBubble",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "portrait": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "specialization": {
+      "type": "text"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "borderColor": {
+      "type": "string"
+    }
+  }
+}

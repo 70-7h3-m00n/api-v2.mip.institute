@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blog_tables",
+  "info": {
+    "displayName": "table",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "row": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.row"
+    }
+  }
+}

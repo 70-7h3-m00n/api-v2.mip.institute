@@ -2,12 +2,13 @@
   "collectionName": "components_shared_texts",
   "info": {
     "displayName": "text",
-    "icon": "bold"
+    "icon": "bold",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "text": {
-      "type": "string"
+      "type": "text"
     }
   }
 }
