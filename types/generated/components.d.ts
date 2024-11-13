@@ -90,6 +90,17 @@ export interface BlogListWithTitle extends Struct.ComponentSchema {
   };
 }
 
+export interface BlogRelatedPrograms extends Struct.ComponentSchema {
+  collectionName: 'components_blog_related_programs';
+  info: {
+    displayName: 'relatedPrograms';
+    icon: 'bulletList';
+  };
+  attributes: {
+    programs: Schema.Attribute.Relation<'oneToMany', 'api::program.program'>;
+  };
+}
+
 export interface BlogRow extends Struct.ComponentSchema {
   collectionName: 'components_blog_rows';
   info: {
@@ -135,6 +146,21 @@ export interface BlogTable extends Struct.ComponentSchema {
   };
   attributes: {
     row: Schema.Attribute.Component<'blog.row', true>;
+  };
+}
+
+export interface BlogTeacherComment extends Struct.ComponentSchema {
+  collectionName: 'components_blog_teacher_comments';
+  info: {
+    description: '';
+    displayName: 'teacherComment';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    borderColor: Schema.Attribute.String;
+    comment: Schema.Attribute.Text;
+    portrait: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    specialization: Schema.Attribute.Text;
   };
 }
 
@@ -274,10 +300,12 @@ declare module '@strapi/strapi' {
       'blog.list-with-background': BlogListWithBackground;
       'blog.list-with-bg-and-title': BlogListWithBgAndTitle;
       'blog.list-with-title': BlogListWithTitle;
+      'blog.related-programs': BlogRelatedPrograms;
       'blog.row': BlogRow;
       'blog.single-image-block': BlogSingleImageBlock;
       'blog.subtitle': BlogSubtitle;
       'blog.table': BlogTable;
+      'blog.teacher-comment': BlogTeacherComment;
       'blog.text-block-with-bg': BlogTextBlockWithBg;
       'shared.list-with-icon': SharedListWithIcon;
       'shared.long-text': SharedLongText;

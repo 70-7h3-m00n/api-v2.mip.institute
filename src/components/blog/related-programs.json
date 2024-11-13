@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blog_related_programs",
+  "info": {
+    "displayName": "relatedPrograms",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "programs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::program.program"
+    }
+  }
+}

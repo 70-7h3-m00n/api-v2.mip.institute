@@ -59,8 +59,27 @@
         "blog.single-image-block",
         "blog.text-block-with-bg",
         "blog.list-with-bg-and-title",
-        "blog.table"
+        "blog.table",
+        "blog.teacher-comment",
+        "blog.related-programs"
       ]
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog.blog",
+      "inversedBy": "relatedBlogs"
+    },
+    "relatedBlogs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "blogs"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
     }
   }
 }

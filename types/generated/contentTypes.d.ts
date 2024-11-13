@@ -495,8 +495,11 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
         'blog.text-block-with-bg',
         'blog.list-with-bg-and-title',
         'blog.table',
+        'blog.teacher-comment',
+        'blog.related-programs',
       ]
     >;
+    blogs: Schema.Attribute.Relation<'manyToMany', 'api::blog.blog'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -508,6 +511,8 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     previewOnly: Schema.Attribute.Boolean;
     publishedAt: Schema.Attribute.DateTime;
     readTime: Schema.Attribute.Integer;
+    relatedBlogs: Schema.Attribute.Relation<'manyToMany', 'api::blog.blog'>;
+    seo: Schema.Attribute.Component<'shared.seo', true>;
     slug: Schema.Attribute.String;
     studyField: Schema.Attribute.String;
     studyFieldSlug: Schema.Attribute.String;
