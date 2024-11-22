@@ -453,6 +453,7 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
     articles: Schema.Attribute.Relation<'oneToMany', 'api::article.article'>;
     avatar: Schema.Attribute.Media<'images' | 'files' | 'videos'> &
       Schema.Attribute.Required;
+    blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -499,6 +500,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
         'blog.related-programs',
       ]
     >;
+    blog_author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     blogs: Schema.Attribute.Relation<'manyToMany', 'api::blog.blog'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
