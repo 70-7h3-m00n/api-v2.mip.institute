@@ -80,6 +80,12 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.seo"
+    },
+    "blog_author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "blogs"
     }
   }
 }
