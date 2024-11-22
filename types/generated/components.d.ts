@@ -44,7 +44,7 @@ export interface BlogItemWithTitle extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
-    text: Schema.Attribute.String;
+    text: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
 }
