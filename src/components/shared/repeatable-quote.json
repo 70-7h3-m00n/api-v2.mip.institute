@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_repeatable_quotes",
+  "info": {
+    "displayName": "repeatableQuote",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
+    }
+  }
+}

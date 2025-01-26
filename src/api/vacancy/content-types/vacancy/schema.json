@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "vacancies",
+  "info": {
+    "singularName": "vacancy",
+    "pluralName": "vacancies",
+    "displayName": "Vacancies",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero": {
+      "displayName": "hero",
+      "type": "component",
+      "repeatable": false,
+      "component": "vacancies.hero"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "vacancies.repeatable-quote-with-title",
+        "vacancies.hero",
+        "vacancies.slider-with-img",
+        "vacancies.recruitment",
+        "vacancies.slider-with-image",
+        "shared.text-with-icon",
+        "shared.rich-text-with-img"
+      ]
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    }
+  }
+}

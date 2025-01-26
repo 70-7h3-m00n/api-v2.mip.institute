@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_vacancies_recruiters",
+  "info": {
+    "displayName": "recruiter"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "text"
+    },
+    "position": {
+      "type": "text"
+    },
+    "quote": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

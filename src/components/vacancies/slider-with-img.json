@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_vacancies_slider_with_imgs",
+  "info": {
+    "displayName": "quoteWithImg",
+    "icon": "cast",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "text"
+    },
+    "slide": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repeatable-quote"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_vacancies_heroes",
+  "info": {
+    "displayName": "hero",
+    "icon": "bold"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "blocks"
+    },
+    "button": {
+      "type": "blocks"
+    }
+  }
+}

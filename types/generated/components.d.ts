@@ -179,6 +179,17 @@ export interface BlogTextBlockWithBg extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedCarousel extends Struct.ComponentSchema {
+  collectionName: 'components_shared_carousels';
+  info: {
+    displayName: 'carousel';
+    icon: 'chartBubble';
+  };
+  attributes: {
+    slide: Schema.Attribute.Component<'shared.slider', true>;
+  };
+}
+
 export interface SharedListWithIcon extends Struct.ComponentSchema {
   collectionName: 'components_shared_list_with_icons';
   info: {
@@ -225,6 +236,17 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedRepeatableQuote extends Struct.ComponentSchema {
+  collectionName: 'components_shared_repeatable_quotes';
+  info: {
+    displayName: 'repeatableQuote';
+    icon: 'apps';
+  };
+  attributes: {
+    quote: Schema.Attribute.Component<'shared.quote', true>;
+  };
+}
+
 export interface SharedRichText extends Struct.ComponentSchema {
   collectionName: 'components_shared_rich_texts';
   info: {
@@ -234,6 +256,18 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
   attributes: {
     body: Schema.Attribute.RichText;
+  };
+}
+
+export interface SharedRichTextWithImg extends Struct.ComponentSchema {
+  collectionName: 'components_shared_rich_text_with_imgs';
+  info: {
+    displayName: 'richTextWithImg';
+    icon: 'crown';
+  };
+  attributes: {
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    text: Schema.Attribute.Blocks;
   };
 }
 
@@ -290,6 +324,85 @@ export interface SharedTextWithIcon extends Struct.ComponentSchema {
   };
 }
 
+export interface VacanciesHero extends Struct.ComponentSchema {
+  collectionName: 'components_vacancies_heroes';
+  info: {
+    displayName: 'hero';
+    icon: 'bold';
+  };
+  attributes: {
+    button: Schema.Attribute.Blocks;
+    subtitle: Schema.Attribute.Blocks;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface VacanciesRecruiter extends Struct.ComponentSchema {
+  collectionName: 'components_vacancies_recruiters';
+  info: {
+    displayName: 'recruiter';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.Text;
+    position: Schema.Attribute.Text;
+    quote: Schema.Attribute.Text;
+  };
+}
+
+export interface VacanciesRecruitment extends Struct.ComponentSchema {
+  collectionName: 'components_vacancies_recruitments';
+  info: {
+    displayName: 'recruitment';
+    icon: 'archive';
+  };
+  attributes: {
+    recruiter: Schema.Attribute.Component<'vacancies.recruiter', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface VacanciesRepeatableQuoteWithTitle
+  extends Struct.ComponentSchema {
+  collectionName: 'components_vacancies_repeatable_quote_with_titles';
+  info: {
+    displayName: 'repeatableQuoteWithTitle';
+    icon: 'bulletList';
+  };
+  attributes: {
+    quote: Schema.Attribute.Component<'shared.repeatable-quote', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface VacanciesSliderWithImage extends Struct.ComponentSchema {
+  collectionName: 'components_vacancies_slider_with_images';
+  info: {
+    displayName: 'sliderWithImage';
+    icon: 'dashboard';
+  };
+  attributes: {
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    quote: Schema.Attribute.Blocks;
+    slides: Schema.Attribute.Component<'shared.slider', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
+export interface VacanciesSliderWithImg extends Struct.ComponentSchema {
+  collectionName: 'components_vacancies_slider_with_imgs';
+  info: {
+    description: '';
+    displayName: 'quoteWithImg';
+    icon: 'cast';
+  };
+  attributes: {
+    img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    slide: Schema.Attribute.Component<'shared.repeatable-quote', true>;
+    title: Schema.Attribute.Text;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -307,15 +420,24 @@ declare module '@strapi/strapi' {
       'blog.table': BlogTable;
       'blog.teacher-comment': BlogTeacherComment;
       'blog.text-block-with-bg': BlogTextBlockWithBg;
+      'shared.carousel': SharedCarousel;
       'shared.list-with-icon': SharedListWithIcon;
       'shared.long-text': SharedLongText;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
+      'shared.repeatable-quote': SharedRepeatableQuote;
       'shared.rich-text': SharedRichText;
+      'shared.rich-text-with-img': SharedRichTextWithImg;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
       'shared.text': SharedText;
       'shared.text-with-icon': SharedTextWithIcon;
+      'vacancies.hero': VacanciesHero;
+      'vacancies.recruiter': VacanciesRecruiter;
+      'vacancies.recruitment': VacanciesRecruitment;
+      'vacancies.repeatable-quote-with-title': VacanciesRepeatableQuoteWithTitle;
+      'vacancies.slider-with-image': VacanciesSliderWithImage;
+      'vacancies.slider-with-img': VacanciesSliderWithImg;
     }
   }
 }

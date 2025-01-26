@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_vacancies_recruitments",
+  "info": {
+    "displayName": "recruitment",
+    "icon": "archive"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "recruiter": {
+      "displayName": "recruiter",
+      "type": "component",
+      "repeatable": true,
+      "component": "vacancies.recruiter"
+    }
+  }
+}
