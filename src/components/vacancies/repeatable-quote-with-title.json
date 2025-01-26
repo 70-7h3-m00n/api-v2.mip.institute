@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_vacancies_repeatable_quote_with_titles",
+  "info": {
+    "displayName": "repeatableQuoteWithTitle",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "quote": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.repeatable-quote"
+    }
+  }
+}

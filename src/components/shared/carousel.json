@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_shared_carousels",
+  "info": {
+    "displayName": "carousel",
+    "icon": "chartBubble"
+  },
+  "options": {},
+  "attributes": {
+    "slide": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.slider"
+    }
+  }
+}

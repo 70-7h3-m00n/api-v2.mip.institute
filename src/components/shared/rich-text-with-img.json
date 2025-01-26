@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_rich_text_with_imgs",
+  "info": {
+    "displayName": "richTextWithImg",
+    "icon": "crown"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "blocks"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
