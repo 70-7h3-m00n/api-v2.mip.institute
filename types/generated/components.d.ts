@@ -227,6 +227,7 @@ export interface SharedMedia extends Struct.ComponentSchema {
 export interface SharedQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_quotes';
   info: {
+    description: '';
     displayName: 'Quote';
     icon: 'indent';
   };
@@ -239,10 +240,18 @@ export interface SharedQuote extends Struct.ComponentSchema {
 export interface SharedRepeatableQuote extends Struct.ComponentSchema {
   collectionName: 'components_shared_repeatable_quotes';
   info: {
+    description: '';
     displayName: 'repeatableQuote';
     icon: 'apps';
   };
   attributes: {
+    block: Schema.Attribute.Enumeration<
+      [
+        '\u041F\u0440\u0435\u0438\u043C\u0443\u0449\u0435\u0441\u0442\u0432\u0430',
+        '\u041D\u0430\u0448\u0438 \u0446\u0435\u043D\u043D\u043E\u0441\u0442\u0438',
+        '\u041A\u0430\u043A \u0441\u0442\u0430\u0442\u044C \u0447\u0430\u0441\u0442\u044C\u044E \u043A\u043E\u043C\u0430\u043D\u0434\u044B \u041C\u0418\u041F?',
+      ]
+    >;
     quote: Schema.Attribute.Component<'shared.quote', true>;
   };
 }
@@ -366,6 +375,7 @@ export interface VacanciesRepeatableQuoteWithTitle
   extends Struct.ComponentSchema {
   collectionName: 'components_vacancies_repeatable_quote_with_titles';
   info: {
+    description: '';
     displayName: 'repeatableQuoteWithTitle';
     icon: 'bulletList';
   };
