@@ -11,14 +11,6 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.quote"
-    },
-    "block": {
-      "type": "enumeration",
-      "enum": [
-        "Преимущества",
-        "Наши ценности",
-        "Как стать частью команды МИП?"
-      ]
     }
   }
 }
