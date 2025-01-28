@@ -244,9 +244,7 @@ export interface SharedRepeatableQuote extends Struct.ComponentSchema {
     displayName: 'repeatableQuote';
     icon: 'apps';
   };
-  attributes: {
-    quote: Schema.Attribute.Component<'shared.quote', true>;
-  };
+  attributes: {};
 }
 
 export interface SharedRichText extends Struct.ComponentSchema {
@@ -408,7 +406,7 @@ export interface VacanciesSliderWithImg extends Struct.ComponentSchema {
   };
   attributes: {
     img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    slide: Schema.Attribute.Component<'shared.repeatable-quote', true>;
+    slide: Schema.Attribute.Component<'shared.quote', true>;
     title: Schema.Attribute.Text;
   };
 }

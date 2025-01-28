@@ -24,7 +24,7 @@
     "slide": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.repeatable-quote"
+      "component": "shared.quote"
     }
   }
 }

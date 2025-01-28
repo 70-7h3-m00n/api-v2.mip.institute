@@ -6,11 +6,5 @@
     "description": ""
   },
   "options": {},
-  "attributes": {
-    "quote": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.quote"
-    }
-  }
+  "attributes": {}
 }
