@@ -380,7 +380,7 @@ export interface VacanciesRepeatableQuoteWithTitle
         '\u041A\u0430\u043A \u0441\u0442\u0430\u0442\u044C \u0447\u0430\u0441\u0442\u044C\u044E \u043A\u043E\u043C\u0430\u043D\u0434\u044B \u041C\u0418\u041F?',
       ]
     >;
-    quote: Schema.Attribute.Component<'shared.repeatable-quote', true>;
+    quote: Schema.Attribute.Component<'shared.quote', true>;
     title: Schema.Attribute.Text;
   };
 }

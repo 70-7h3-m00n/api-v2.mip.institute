@@ -10,11 +10,6 @@
     "title": {
       "type": "text"
     },
-    "quote": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.repeatable-quote"
-    },
     "block": {
       "type": "enumeration",
       "enum": [
@@ -22,6 +17,11 @@
         "Наши ценности",
         "Как стать частью команды МИП?"
       ]
+    },
+    "quote": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.quote"
     }
   }
 }
