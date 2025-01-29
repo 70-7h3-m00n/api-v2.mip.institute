@@ -2,7 +2,8 @@
   "collectionName": "components_vacancies_slider_with_images",
   "info": {
     "displayName": "sliderWithImage",
-    "icon": "dashboard"
+    "icon": "dashboard",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,18 +14,19 @@
       "type": "blocks"
     },
     "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "slides": {
+    "slider": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.slider"
     }
   }
