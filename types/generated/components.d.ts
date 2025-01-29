@@ -386,13 +386,14 @@ export interface VacanciesRepeatableQuoteWithTitle
 export interface VacanciesSliderWithImage extends Struct.ComponentSchema {
   collectionName: 'components_vacancies_slider_with_images';
   info: {
+    description: '';
     displayName: 'sliderWithImage';
     icon: 'dashboard';
   };
   attributes: {
     img: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     quote: Schema.Attribute.Blocks;
-    slides: Schema.Attribute.Component<'shared.slider', true>;
+    slider: Schema.Attribute.Component<'shared.slider', false>;
     title: Schema.Attribute.Text;
   };
 }
