@@ -2,13 +2,14 @@
   "collectionName": "components_shared_carousels",
   "info": {
     "displayName": "carousel",
-    "icon": "chartBubble"
+    "icon": "chartBubble",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "slide": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.slider"
     }
   }

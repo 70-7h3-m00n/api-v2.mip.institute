@@ -182,11 +182,12 @@ export interface BlogTextBlockWithBg extends Struct.ComponentSchema {
 export interface SharedCarousel extends Struct.ComponentSchema {
   collectionName: 'components_shared_carousels';
   info: {
+    description: '';
     displayName: 'carousel';
     icon: 'chartBubble';
   };
   attributes: {
-    slide: Schema.Attribute.Component<'shared.slider', true>;
+    slide: Schema.Attribute.Component<'shared.slider', false>;
   };
 }
 
@@ -256,6 +257,31 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
   attributes: {
     body: Schema.Attribute.RichText;
+  };
+}
+
+export interface SharedRichTextJson extends Struct.ComponentSchema {
+  collectionName: 'components_shared_rich_text_jsons';
+  info: {
+    description: '';
+    displayName: 'Rich Text JSON';
+    icon: 'apps';
+  };
+  attributes: {
+    text: Schema.Attribute.Blocks;
+  };
+}
+
+export interface SharedRichTextWithCarousel extends Struct.ComponentSchema {
+  collectionName: 'components_shared_rich_text_with_carousels';
+  info: {
+    description: '';
+    displayName: 'RichTextWithCarousel';
+    icon: 'briefcase';
+  };
+  attributes: {
+    carousel: Schema.Attribute.Component<'shared.carousel', false>;
+    text: Schema.Attribute.Blocks;
   };
 }
 
@@ -436,6 +462,8 @@ declare module '@strapi/strapi' {
       'shared.quote': SharedQuote;
       'shared.repeatable-quote': SharedRepeatableQuote;
       'shared.rich-text': SharedRichText;
+      'shared.rich-text-json': SharedRichTextJson;
+      'shared.rich-text-with-carousel': SharedRichTextWithCarousel;
       'shared.rich-text-with-img': SharedRichTextWithImg;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;

@@ -1,0 +1,64 @@
+{
+  "kind": "singleType",
+  "collectionName": "incomers",
+  "info": {
+    "singularName": "incomer",
+    "pluralName": "incomers",
+    "displayName": "Incomer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "blocks"
+    },
+    "incomersInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.rich-text-with-img"
+    },
+    "MeetInstitute": {
+      "displayName": "Rich Text JSON",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.rich-text-json"
+    },
+    "studyProcess": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.rich-text-json"
+    },
+    "programSelectionsTop": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.rich-text-json"
+    },
+    "programSelectionsBottom": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.rich-text-json"
+    },
+    "AdventureCards": {
+      "displayName": "RichTextWithCarousel",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.rich-text-with-carousel"
+    },
+    "programForRequest": {
+      "type": "blocks"
+    },
+    "ourPossibilities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.rich-text-json"
+    },
+    "careerCenter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.rich-text-with-img"
+    }
+  }
+}
