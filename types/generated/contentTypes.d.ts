@@ -590,6 +590,59 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiIncomerIncomer extends Struct.SingleTypeSchema {
+  collectionName: 'incomers';
+  info: {
+    description: '';
+    displayName: 'Incomer';
+    pluralName: 'incomers';
+    singularName: 'incomer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    AdventureCards: Schema.Attribute.Component<
+      'shared.rich-text-with-carousel',
+      true
+    >;
+    careerCenter: Schema.Attribute.Component<
+      'shared.rich-text-with-img',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    incomersInfo: Schema.Attribute.Component<
+      'shared.rich-text-with-img',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::incomer.incomer'
+    > &
+      Schema.Attribute.Private;
+    MeetInstitute: Schema.Attribute.Component<'shared.rich-text-json', true>;
+    ourPossibilities: Schema.Attribute.Component<'shared.rich-text-json', true>;
+    programForRequest: Schema.Attribute.Blocks;
+    programSelectionsBottom: Schema.Attribute.Component<
+      'shared.rich-text-json',
+      true
+    >;
+    programSelectionsTop: Schema.Attribute.Component<
+      'shared.rich-text-json',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    studyProcess: Schema.Attribute.Component<'shared.rich-text-json', true>;
+    title: Schema.Attribute.Blocks;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProgramProgram extends Struct.CollectionTypeSchema {
   collectionName: 'programs';
   info: {
@@ -1194,6 +1247,7 @@ declare module '@strapi/strapi' {
       'api::blog.blog': ApiBlogBlog;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
+      'api::incomer.incomer': ApiIncomerIncomer;
       'api::program.program': ApiProgramProgram;
       'api::vacancy.vacancy': ApiVacancyVacancy;
       'plugin::content-releases.release': PluginContentReleasesRelease;

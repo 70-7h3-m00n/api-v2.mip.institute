@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_rich_text_with_carousels",
+  "info": {
+    "displayName": "RichTextWithCarousel",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "blocks"
+    },
+    "carousel": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.carousel"
+    }
+  }
+}
