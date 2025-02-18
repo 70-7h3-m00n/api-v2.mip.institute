@@ -627,7 +627,7 @@ export interface ApiIncomerIncomer extends Struct.SingleTypeSchema {
     ourPossibilities: Schema.Attribute.Component<'shared.rich-text-json', true>;
     programForRequest: Schema.Attribute.Blocks;
     programSelectionsBottom: Schema.Attribute.Component<
-      'shared.rich-text-json',
+      'shared.rich-text-with-img',
       true
     >;
     programSelectionsTop: Schema.Attribute.Component<

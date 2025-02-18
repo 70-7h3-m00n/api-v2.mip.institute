@@ -36,11 +36,6 @@
       "repeatable": true,
       "component": "shared.rich-text-json"
     },
-    "programSelectionsBottom": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.rich-text-json"
-    },
     "AdventureCards": {
       "displayName": "RichTextWithCarousel",
       "type": "component",
@@ -58,6 +53,11 @@
     "careerCenter": {
       "type": "component",
       "repeatable": false,
+      "component": "shared.rich-text-with-img"
+    },
+    "programSelectionsBottom": {
+      "type": "component",
+      "repeatable": true,
       "component": "shared.rich-text-with-img"
     }
   }
