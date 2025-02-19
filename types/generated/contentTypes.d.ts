@@ -643,9 +643,10 @@ export interface ApiIncomerIncomer extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiPartnerPartner extends Struct.SingleTypeSchema {
+export interface ApiPartnerPartner extends Struct.CollectionTypeSchema {
   collectionName: 'partners';
   info: {
+    description: '';
     displayName: 'partner';
     pluralName: 'partners';
     singularName: 'partner';

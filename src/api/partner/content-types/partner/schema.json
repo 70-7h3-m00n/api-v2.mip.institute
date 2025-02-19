@@ -1,10 +1,11 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "partners",
   "info": {
     "singularName": "partner",
     "pluralName": "partners",
-    "displayName": "partner"
+    "displayName": "partner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,14 +27,15 @@
       ]
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
