@@ -18,7 +18,7 @@ export default ({ env }) => ({
   preview: {
     enabled: true,
     config: {
-      allowedOrigins: ['https://mip.institute', 'http://localhost:3000','https://mip-institute-git-previewmode-ipe.vercel.app'], 
+      allowedOrigins: ['https://mip.institute', 'http://localhost:3000','https://mip-institute-git-previewmode-ipe.vercel.app', 'dev.api-v2.mip.institute'], 
       async handler(uid, { documentId, locale, status }) {
         const clientUrl = env("CLIENT_URL")
         const previewSecret = env("PREVIEW_SECRET")
@@ -44,7 +44,7 @@ export default ({ env }) => ({
         console.log(urlSearchParams, clientUrl);
         
         // добавить секрет и убрать локалхост на енв переменные в зависимости от сред
-        return `${clientUrl}/api/preview?${urlSearchParams}`;
+        return `https://mip-institute-git-previewmode-ipe.vercel.app/api/preview?${urlSearchParams}`;
       },
     }
   }
