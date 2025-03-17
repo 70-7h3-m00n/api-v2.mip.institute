@@ -8,6 +8,13 @@ export default [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
+          'frame-src': [
+            "'self'", // Разрешает текущий домен
+            'https://mip.institute', 
+            'http://localhost:3000', 
+            'https://mip-institute-git-previewmode-ipe.vercel.app',
+            'https://dev.api-v2.mip.institute' // ✅ Добавляем этот домен
+          ],
           'connect-src': ["'self'", 'https:'],
           'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
           'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
