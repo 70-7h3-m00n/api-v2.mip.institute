@@ -44,7 +44,7 @@ export default ({ env }) => ({
         console.log(urlSearchParams, clientUrl);
         
         // добавить секрет и убрать локалхост на енв переменные в зависимости от сред
-        return `https://mip-institute-git-previewmode-ipe.vercel.app/api/preview?${urlSearchParams}`;
+        return `${clientUrl}/api/preview?${urlSearchParams}`;
       },
     }
   }
