@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "heroCarousel": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.rich-text-with-img"
+    }
+  }
+}
