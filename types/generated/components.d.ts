@@ -179,6 +179,22 @@ export interface BlogTextBlockWithBg extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeReviews extends Struct.ComponentSchema {
+  collectionName: 'components_home_reviews';
+  info: {
+    displayName: 'reviews';
+    icon: 'bulletList';
+  };
+  attributes: {
+    goal: Schema.Attribute.Text;
+    name: Schema.Attribute.String;
+    pointA: Schema.Attribute.Text;
+    pointB: Schema.Attribute.Text;
+    program: Schema.Attribute.Text;
+    videoId: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCarousel extends Struct.ComponentSchema {
   collectionName: 'components_shared_carousels';
   info: {
@@ -455,6 +471,7 @@ declare module '@strapi/strapi' {
       'blog.table': BlogTable;
       'blog.teacher-comment': BlogTeacherComment;
       'blog.text-block-with-bg': BlogTextBlockWithBg;
+      'home.reviews': HomeReviews;
       'shared.carousel': SharedCarousel;
       'shared.list-with-icon': SharedListWithIcon;
       'shared.long-text': SharedLongText;

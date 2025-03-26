@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_reviews",
+  "info": {
+    "displayName": "reviews",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "program": {
+      "type": "text"
+    },
+    "goal": {
+      "type": "text"
+    },
+    "pointA": {
+      "type": "text"
+    },
+    "pointB": {
+      "type": "text"
+    },
+    "videoId": {
+      "type": "string"
+    }
+  }
+}
