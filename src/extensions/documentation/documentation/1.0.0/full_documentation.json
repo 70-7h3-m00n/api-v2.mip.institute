@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-03-26T15:29:41.358Z"
+    "x-generation-date": "2025-07-29T13:30:59.225Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -15354,6 +15354,12 @@
                   "$ref": "#/components/schemas/HomeReviewsComponent"
                 }
               },
+              "adventureCards": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/SharedRichTextWithImgComponent"
+                }
+              },
               "locale": {
                 "type": "string"
               },
@@ -16301,7 +16307,8 @@
                   "enum": [
                     "association",
                     "fund",
-                    "park"
+                    "park",
+                    "academy"
                   ]
                 },
                 "image": {
@@ -16493,6 +16500,12 @@
               "$ref": "#/components/schemas/HomeReviewsComponent"
             }
           },
+          "adventureCards": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SharedRichTextWithImgComponent"
+            }
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -16582,6 +16595,12 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/HomeReviewsComponent"
+                  }
+                },
+                "adventureCards": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SharedRichTextWithImgComponent"
                   }
                 },
                 "createdAt": {
@@ -17194,7 +17213,8 @@
                 "enum": [
                   "association",
                   "fund",
-                  "park"
+                  "park",
+                  "academy"
                 ]
               },
               "image": {
@@ -17284,7 +17304,8 @@
             "enum": [
               "association",
               "fund",
-              "park"
+              "park",
+              "academy"
             ]
           },
           "image": {
@@ -17944,7 +17965,8 @@
                   "enum": [
                     "association",
                     "fund",
-                    "park"
+                    "park",
+                    "academy"
                   ]
                 },
                 "image": {

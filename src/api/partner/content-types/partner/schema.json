@@ -23,7 +23,8 @@
       "enum": [
         "association",
         "fund",
-        "park"
+        "park",
+        "academy"
       ]
     },
     "image": {

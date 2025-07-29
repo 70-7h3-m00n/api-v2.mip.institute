@@ -602,6 +602,10 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    adventureCards: Schema.Attribute.Component<
+      'shared.rich-text-with-img',
+      true
+    >;
     blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -698,7 +702,9 @@ export interface ApiPartnerPartner extends Struct.CollectionTypeSchema {
     publishedAt: Schema.Attribute.DateTime;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
-    type: Schema.Attribute.Enumeration<['association', 'fund', 'park']>;
+    type: Schema.Attribute.Enumeration<
+      ['association', 'fund', 'park', 'academy']
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
