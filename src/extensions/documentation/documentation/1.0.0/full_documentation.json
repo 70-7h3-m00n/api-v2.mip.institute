@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-07-29T13:30:59.225Z"
+    "x-generation-date": "2025-08-04T08:01:26.857Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -8229,6 +8229,12 @@
                         }
                       }
                     },
+                    "isBase": {
+                      "type": "boolean"
+                    },
+                    "isExpertOpinion": {
+                      "type": "boolean"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -10654,6 +10660,12 @@
                               }
                             }
                           },
+                          "isBase": {
+                            "type": "boolean"
+                          },
+                          "isExpertOpinion": {
+                            "type": "boolean"
+                          },
                           "createdAt": {
                             "type": "string",
                             "format": "date-time"
@@ -11155,6 +11167,12 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "isBase": {
+                "type": "boolean"
+              },
+              "isExpertOpinion": {
+                "type": "boolean"
               },
               "locale": {
                 "type": "string"
@@ -12701,6 +12719,12 @@
                     }
                   }
                 },
+                "isBase": {
+                  "type": "boolean"
+                },
+                "isExpertOpinion": {
+                  "type": "boolean"
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -12785,6 +12809,12 @@
                 "type": "string"
               }
             }
+          },
+          "isBase": {
+            "type": "boolean"
+          },
+          "isExpertOpinion": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
@@ -13998,6 +14028,12 @@
                                 "type": "string"
                               }
                             }
+                          },
+                          "isBase": {
+                            "type": "boolean"
+                          },
+                          "isExpertOpinion": {
+                            "type": "boolean"
                           },
                           "createdAt": {
                             "type": "string",
@@ -16230,6 +16266,12 @@
                       }
                     }
                   }
+                },
+                "isBase": {
+                  "type": "boolean"
+                },
+                "isExpertOpinion": {
+                  "type": "boolean"
                 },
                 "createdAt": {
                   "type": "string",
