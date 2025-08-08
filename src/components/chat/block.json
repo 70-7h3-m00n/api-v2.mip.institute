@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_chat_blocks",
+  "info": {
+    "displayName": "block"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "blocks"
+    },
+    "option": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.rich-text"
+    }
+  }
+}

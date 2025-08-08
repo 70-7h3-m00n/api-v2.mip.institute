@@ -179,6 +179,17 @@ export interface BlogTextBlockWithBg extends Struct.ComponentSchema {
   };
 }
 
+export interface ChatBlock extends Struct.ComponentSchema {
+  collectionName: 'components_chat_blocks';
+  info: {
+    displayName: 'block';
+  };
+  attributes: {
+    option: Schema.Attribute.Component<'shared.rich-text', true>;
+    title: Schema.Attribute.Blocks;
+  };
+}
+
 export interface HomeReviews extends Struct.ComponentSchema {
   collectionName: 'components_home_reviews';
   info: {
@@ -272,7 +283,8 @@ export interface SharedRichText extends Struct.ComponentSchema {
     icon: 'align-justify';
   };
   attributes: {
-    body: Schema.Attribute.RichText;
+    nextQuestion: Schema.Attribute.Relation<'oneToOne', 'api::chatbot.chatbot'>;
+    option: Schema.Attribute.String;
   };
 }
 
@@ -471,6 +483,7 @@ declare module '@strapi/strapi' {
       'blog.table': BlogTable;
       'blog.teacher-comment': BlogTeacherComment;
       'blog.text-block-with-bg': BlogTextBlockWithBg;
+      'chat.block': ChatBlock;
       'home.reviews': HomeReviews;
       'shared.carousel': SharedCarousel;
       'shared.list-with-icon': SharedListWithIcon;
