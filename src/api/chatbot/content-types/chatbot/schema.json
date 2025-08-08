@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chatbots",
+  "info": {
+    "singularName": "chatbot",
+    "pluralName": "chatbots",
+    "displayName": "Chatbot",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "question": {
+      "type": "blocks"
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.rich-text"
+    },
+    "title": {
+      "type": "string"
+    },
+    "inputType": {
+      "type": "enumeration",
+      "enum": [
+        "question",
+        "email",
+        "phone",
+        "comment"
+      ]
+    }
+  }
+}

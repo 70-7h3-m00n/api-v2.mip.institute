@@ -560,6 +560,40 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiChatbotChatbot extends Struct.CollectionTypeSchema {
+  collectionName: 'chatbots';
+  info: {
+    description: '';
+    displayName: 'Chatbot';
+    pluralName: 'chatbots';
+    singularName: 'chatbot';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    inputType: Schema.Attribute.Enumeration<
+      ['question', 'email', 'phone', 'comment']
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::chatbot.chatbot'
+    > &
+      Schema.Attribute.Private;
+    options: Schema.Attribute.Component<'shared.rich-text', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    question: Schema.Attribute.Blocks;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1320,6 +1354,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::blog.blog': ApiBlogBlog;
       'api::category.category': ApiCategoryCategory;
+      'api::chatbot.chatbot': ApiChatbotChatbot;
       'api::global.global': ApiGlobalGlobal;
       'api::home.home': ApiHomeHome;
       'api::incomer.incomer': ApiIncomerIncomer;
