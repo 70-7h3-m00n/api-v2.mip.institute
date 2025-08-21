@@ -584,6 +584,7 @@ export interface ApiChatbotChatbot extends Struct.CollectionTypeSchema {
       'api::chatbot.chatbot'
     > &
       Schema.Attribute.Private;
+    nextAction: Schema.Attribute.Relation<'oneToOne', 'api::chatbot.chatbot'>;
     options: Schema.Attribute.Component<'shared.rich-text', true>;
     publishedAt: Schema.Attribute.DateTime;
     question: Schema.Attribute.Blocks;
