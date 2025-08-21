@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-08-08T10:03:57.685Z"
+    "x-generation-date": "2025-08-21T09:13:44.917Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -14921,6 +14921,17 @@
                   "comment"
                 ]
               },
+              "nextAction": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ],
+                "example": "string or id"
+              },
               "locale": {
                 "type": "string"
               },
@@ -15004,6 +15015,17 @@
               "phone",
               "comment"
             ]
+          },
+          "nextAction": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "number"
+              },
+              "documentId": {
+                "type": "string"
+              }
+            }
           },
           "createdAt": {
             "type": "string",

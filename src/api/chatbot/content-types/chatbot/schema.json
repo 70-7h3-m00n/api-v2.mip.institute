@@ -30,6 +30,11 @@
         "phone",
         "comment"
       ]
+    },
+    "nextAction": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::chatbot.chatbot"
     }
   }
 }
