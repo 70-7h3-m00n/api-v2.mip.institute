@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_chat_variants",
+  "info": {
+    "displayName": "variant",
+    "icon": "bold",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "option": {
+      "type": "text"
+    },
+    "nextQuestion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::chatbot.chatbot"
+    }
+  }
+}

@@ -7,13 +7,8 @@
   },
   "options": {},
   "attributes": {
-    "option": {
-      "type": "string"
-    },
-    "nextQuestion": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::chatbot.chatbot"
+    "body": {
+      "type": "text"
     }
   }
 }
