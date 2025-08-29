@@ -578,6 +578,7 @@ export interface ApiChatbotChatbot extends Struct.CollectionTypeSchema {
     inputType: Schema.Attribute.Enumeration<
       ['question', 'email', 'phone', 'comment']
     >;
+    isLast: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-08-22T07:28:11.898Z"
+    "x-generation-date": "2025-08-29T12:32:58.724Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -14921,6 +14921,9 @@
                   "$ref": "#/components/schemas/ChatVariantComponent"
                 }
               },
+              "isLast": {
+                "type": "boolean"
+              },
               "locale": {
                 "type": "string"
               },
@@ -15037,6 +15040,9 @@
                 "items": {
                   "$ref": "#/components/schemas/ChatVariantComponent"
                 }
+              },
+              "isLast": {
+                "type": "boolean"
               },
               "createdAt": {
                 "type": "string",
@@ -15348,6 +15354,9 @@
             "items": {
               "$ref": "#/components/schemas/ChatVariantComponent"
             }
+          },
+          "isLast": {
+            "type": "boolean"
           },
           "createdAt": {
             "type": "string",
